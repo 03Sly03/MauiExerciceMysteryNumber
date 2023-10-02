@@ -30,18 +30,19 @@ public partial class MainPage : ContentPage
             {
                 MoreOrLess.IsVisible = true;
                 MoreOrLess.Text = $"le nombre mystère est plus petit. Il vous reste {5 - coup} coups";
+                NbChoice.Text = "";
             }
             else if (nbchoix < nbmystere)
             {
                 MoreOrLess.IsVisible = true;
                 MoreOrLess.Text = $"le nombre mystère est plus grand. Il vous reste {5 - coup} coups";
+                NbChoice.Text = "";
             }
         }
         else
         {
             InitializeGame();
         }
-        NbChoice.Text = "";
     }
 
     private void InitializeGame()
