@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDemo01.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="question_mark_body_shadow.png"
+                SemanticProperties.Description="shadow of a body with a black question mark."
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Devinez le nombre mystère !"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Pour gagner vous devez trouvez le nombre mystère qui est compris entre 1 et 50 ! Mais attention vous n'avez que 5 essais !"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="NbToFind"
+                Text=""
+                FontSize="14"
+                HorizontalOptions="Center" />
+
+            <Entry 
+                Text=""
+                Placeholder="Entrez un nombre ici"
+                x:Name="NbChoice"
+                IsEnabled="true"
+                HorizontalOptions="Center"
+                Keyboard="Numeric"
+                Completed="IsTheMysteryNumber"/>
+
+            <Label
+                x:Name="MoreOrLess"
+                Text=""
+                FontSize="14"
+                HorizontalOptions="Center"
+                IsVisible="false"/>
+            <Label
+                x:Name="Congratulation"
+                IsVisible="false"
+                Text=""
+                FontSize="22"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="PlayBtn"
+                Text="Jouer"
+                SemanticProperties.Hint="Check if the choosed number is the mystery number"
+                Clicked="IsTheMysteryNumber"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
