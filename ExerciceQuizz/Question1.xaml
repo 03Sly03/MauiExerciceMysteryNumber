@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExerciceQuizz.Question1"
+             Title="Question1">
+    <VerticalStackLayout>
+        <Label 
+            Text="{Binding TheQuestion}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry x:Name="Answer" HorizontalOptions="Center" BackgroundColor="LightGray" Placeholder="Votre réponse ici" Text="{Binding UserAnswer}"/>
+        <Button Text="C'est mon dernier mot Jean Pierre" Command="{Binding CheckUserAnswerCommand}" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Label x:Name="IsGoodAnswer" Text="{Binding IsGoodAnswer}"/>
+    </VerticalStackLayout>
+</ContentPage>

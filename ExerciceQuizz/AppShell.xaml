@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ExerciceQuizz.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ExerciceQuizz"
+    xmlns:views="clr-namespace:ExerciceQuizz.Views">
+    <!--Shell.FlyoutBehavior="enable">-->
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent
+            Title="Home1"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+        <ShellContent 
+                Title="Menu Quizz"
+                ContentTemplate="{DataTemplate local:MainQuizz}"
+                Route="MainQuizz"
+                />
+        <Tab Title="Les questions">
+            <ShellContent
+                Title="Question 1"
+                ContentTemplate="{DataTemplate local:Question1}"
+                Route="Question1" />
+            <ShellContent
+                Title="Question 2"
+                ContentTemplate="{DataTemplate local:Question2}"
+                Route="Question2" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Exercices" >
+        <Tab>
+            <ShellContent 
+                Title="Quizz"
+                ContentTemplate="{DataTemplate local:MainQuizz}"
+                Route="MainQuizz"
+                />
+        </Tab>
+    </FlyoutItem>
+    <MenuItem Text="Help"
+              Clicked="OnHelpClicked"/>
+
+    <Shell.FlyoutHeader>
+        <Label Text="ahahaaaa !!"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooter>
+        <Label Text="ohohoooo !!"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+    </Shell.FlyoutFooter>
+    <!--<TabBar>
+        <ShellContent 
+            Title="Quizz"
+            ContentTemplate="{DataTemplate local:MainQuizz}"
+            Route="MainQuizz"
+            />
+        <ShellContent
+                Title="Question 1"
+                ContentTemplate="{DataTemplate local:Question1}"
+                Route="Question1" />
+        <ShellContent
+                Title="Question 2"
+                ContentTemplate="{DataTemplate local:Question2}"
+                Route="Question2" />
+    </TabBar>-->
+</Shell>
+    

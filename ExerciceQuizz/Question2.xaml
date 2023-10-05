@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExerciceQuizz.Question2"
+             Title="Question2">
+    <VerticalStackLayout>
+        <Label 
+            Text="De quel film est tiré cette réplique ? 'Vas chier... sac à merde'"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <!--<Label Text="{Binding}"/>-->
+        <Entry x:Name="Answer" HorizontalOptions="Center" BackgroundColor="LightGray" />
+        <Button Text="C'est mon dernier mot Jean Pierre" Clicked="OnPushAnswerClicked"/>
+    </VerticalStackLayout>
+</ContentPage>
